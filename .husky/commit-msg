@@ -2,5 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 
-npx --no -- commitlint --edit "$1" && echo "Nje commit i bukur. Vazhdojme
-tutje 😃😎"  || (echo "Ka je nis o jarano 🤬. Kqyr seri cka je ka don me bo commit 🤯" && exit 1)
+npx --no -- commitlint --edit "$1" && echo "Nje commit i bukur. Vazhdojme tutje 😃😎"  || (echo "Ka je nis o jarano 🤬. Kqyr seri cka je ka don me bo commit 🤯" && exit 1)
