@@ -20,6 +20,8 @@ module.exports = {
         'revert',
         'style',
         'test',
+        'progress',
+        'done',
       ];
       return [2, 'always', types];
     },
