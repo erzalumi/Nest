@@ -7,5 +7,5 @@ export enum ProjectType {
   ARTIFICIAL_INTELLIGENCE = 'Artificial Intelligence',
   DATA_ANALYSIS = 'Data Analysis',
   INFRASTRUCTURE = 'Infrastructure',
-  MARKETING_CAMPAIGN = 'Marketing Campaign'
+  OTHER = 'Marketing Campaign'
   }
