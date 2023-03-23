@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
+import { Task } from 'src/api/tasks/entities/task.entity';
 import { User } from 'src/api/user/entities/user.entity';
 import { AuditEntity } from 'src/common/db/customBaseEntites/AuditEntity';
-import { Column, Entity, JoinTable, ManyToMany } from 'typeorm';
+import { Column, Entity, JoinTable, ManyToMany, OneToMany } from 'typeorm';
 import { ProjectType } from '../enums/projectTypes.enum';
 
 @Entity('projects')
@@ -20,7 +21,13 @@ export class Project extends AuditEntity{
     })
     type: ProjectType;
 
-    @ManyToMany(() => User)
-    @JoinTable()
-    users: User[];
+  @ManyToMany(() => User)
+  @JoinTable()
+  users: User[];
+
+  @OneToMany(() => Task, (task) => task.project)
+  tasks: Task[];
+
+    
+
 }
