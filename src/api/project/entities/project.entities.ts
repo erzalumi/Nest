@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import { Report } from 'src/api/report/entities/report.entity';
 import { Task } from 'src/api/tasks/entities/task.entity';
 import { User } from 'src/api/user/entities/user.entity';
 import { AuditEntity } from 'src/common/db/customBaseEntites/AuditEntity';
@@ -28,6 +29,6 @@ export class Project extends AuditEntity{
   @OneToMany(() => Task, (task) => task.project)
   tasks: Task[];
 
-    
-
+  @OneToMany(() => Report, (report) => report.project)
+  reports: Report[];
 }

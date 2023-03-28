@@ -7,6 +7,7 @@ import { AuditEntity } from '../../../common/db/customBaseEntites/AuditEntity';
 import { UserStatus } from '../enums/userStatus';
 import { Project } from 'src/api/project/entities/project.entities';
 import { Task } from 'src/api/tasks/entities/task.entity';
+import { Report } from 'src/api/report/entities/report.entity';
 
 @Entity('users')
 export class User extends AuditEntity {
@@ -81,4 +82,7 @@ export class User extends AuditEntity {
 
   @OneToMany(() => Task, (task) => task.user)
   tasks: Task[];
+
+  @OneToMany(() => Report, (report) => report.user)
+  reports: Report[];
 }
